@@ -1,0 +1,22 @@
+{
+  "name": "video_chat_app",
+  "version": "1.0.0",
+  "description": "video chat app made by Gaurav Rahangdale",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "gaurav rahangdale",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "peer": "^0.6.1",
+    "socket.io": "^4.1.1",
+    "uuid": "^8.3.2"
+  }
+}

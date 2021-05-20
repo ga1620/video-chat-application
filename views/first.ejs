@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="module" src="milsymbol-2.0.0/src/milsymbol.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script defer src="firstscript.js"></script>
+  <title>Document</title>
+  <style>
+     .firstdiv{
+         display: flex;
+         justify-content: center;
+         align-content: center;
+         padding-top: 20vh;
+         width: 100vw;
+         height: 100vh;
+         margin: 0 0;
+         background-color: rgb(27, 27, 27);
+     }
+     .insidediv{
+        background: #4CA1AF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #C4E0E5, #4CA1AF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #C4E0E5, #4CA1AF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+     }
+
+     .btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 19px;
+  padding: 9px 26px 9px 27px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+.menu1{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ padding-left: 20px;
+ padding-right: 20px;
+ padding-top: 10%;
+ row-gap: 20px;
+}
+
+
+.firstinput{
+  width: 100%;
+  height: 34px;
+  border: none;
+}
+
+.fb{
+  width: 80%;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 35px;
+}
+
+#roomid{
+ margin-top: 40px;
+ font-size: 25px;
+ margin-left: 20px;
+  margin-right: 20px;
+  word-wrap: break-word;
+  text-align: center;
+  display: none;
+}
+
+
+
+  </style>
+</head>
+<body>
+    <div class="firstdiv">
+  <div style="width: 300px; height: 300px; border-radius: 5px;" class="insidediv">
+    <ul class="nav nav-tabs">
+        <li class="active"><a style="font-size: 20px;" data-toggle="tab" href="#home">Create Room</a></li>
+        <li><a style="font-size: 20px;" data-toggle="tab" href="#menu1">Join Room</a></li>
+      </ul>
+    
+      <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+          <button class="btn fb" onclick="createRoomId()">Create-Room</button>
+          <p id="roomid"></p>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+          <form class="menu1" onsubmit="return false">       
+           <input type="text" placeholder="Enter Name" class="firstinput" required id="namefirst"/>
+          <input type="text" placeholder="Enter Room-id" class="firstinput" required id="roomidfirst"/>
+          <br/>
+          <button class="btn" type="submit" onclick="getSecondPage(event)">Join</button>
+        </form>
+
+        </div>
+       </div>
+    </div>
+  </div>
+</body>
+</html>
